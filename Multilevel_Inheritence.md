@@ -27,6 +27,58 @@ To write a Python program that uses multilevel inheritance to get and display a 
 
 ## Program
 Add code here
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def display(self):
+        print("Name:", self.name)
+        print("Age:", self.age)
+
+
+# Child class inheriting from Person
+class Details(Person):
+    def __init__(self, name, age, location):
+        super().__init__(name, age)
+        self.location = location
+
+    def display(self):
+        super().display()
+        print("Location:", self.location)
+
+
+# Grandchild class inheriting from Details
+class Show(Details):
+    def __init__(self, name, age, location):
+        super().__init__(name, age, location)
+
+    def display(self):
+        print("\n--- Person Details ---")
+        super().display()
+
+
+# Input from user
+name = input("Enter name: ")
+age = int(input("Enter age: "))
+location = input("Enter location: ")
+
+# Create object of Show class
+person = Show(name, age, location)
+
+# Display details
+person.display()
+
 
 ## Sample Output
+Enter name: Aishwarya
+Enter age: 19
+Enter location: Chennai
+
+--- Person Details ---
+Name: Aishwarya
+Age: 19
+Location: Chennai
+##Result
+Hence the output is verified
 
