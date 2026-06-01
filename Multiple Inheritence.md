@@ -25,5 +25,45 @@ To write a Python program to calculate **Add, Sub & Division** using **Multiple 
 
 ## 💻 Program 
 Add code here
+class Addition:
+    def add(self, a, b):
+        return a + b
+
+
+class Subtraction:
+    def subtract(self, a, b):
+        return a - b
+
+
+class Division:
+    def divide(self, a, b):
+        if b != 0:
+            return a / b
+        else:
+            return "Error: Division by zero"
+
+
+# Multiple Inheritance: Arithmetic inherits from all three
+class Arithmetic(Addition, Subtraction, Division):
+    def display(self, a, b):
+        print("Addition:", self.add(a, b))
+        print("Subtraction:", self.subtract(a, b))
+        print("Division:", self.divide(a, b))
+
+
+# Input from user
+x = int(input("Enter first number: "))
+y = int(input("Enter second number: "))
+
+obj = Arithmetic()
+obj.display(x, y)
+
 ## Output Example
+Enter first number: 20
+Enter second number: 5
+Addition: 25
+Subtraction: 15
+Division: 4.0
+##Result 
+Hence the output is verified
 
