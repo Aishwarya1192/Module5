@@ -13,7 +13,22 @@ To write a Python program that creates a **Student** class with a **default cons
 ## 🧾 Program
 
 Add code here
+class Student:
+    def __init__(self):
+        self.name = ""
+
+    def welcome(self):
+        print(f"Welcome, {self.name}!")
+
+# Accept name from user
+s = Student()
+s.name = input("Enter student name: ")
+s.welcome()
 
 ## Output
+Enter student name: Aishwarya
+Welcome, Aishwarya!
+
 
 ## Result
+Hence the output is verified
